@@ -10,8 +10,19 @@ using namespace std;
 '\0' ---> caracter de fin de cadena
 
 */
+
+    ///IMPLEMENTE UNA FUNCION QUE INTERCAMBIE SUS VALORES
+
+    void cambio(int &a, int &b){
+        int aux = a;
+        a = b ;
+        b = aux;
+        cout << a << endl;
+        cout << b;
+    }
 int main()
 {
+
 
     string cad = "CIENCIA DE LA COMPUTACION" ;
     ///cout << cad.at(5) << endl; /// ---> imprime caracter en dicha posición [0, n]
@@ -33,19 +44,27 @@ int main()
     }
 
     /// VERFICAR SI LA CADENA ES PALIDROMO
-
+/*
     string cadena = "reconocer";
+    int i =0;
+    int j = cadena.length() -1 ;
+    bool esPalindromo = true;
 
-    for (int i= 0; i < cadena.length(); i++){
-        for (int j= 0; j > 0; j--){
-            if (cadena[i] == cadena[j]){
-                cout << "La cadena es paindroma " << endl;
-            }else{
-                cout << "No es palindromo " << endl;
-            }
+    while (i<j){
+        if (cadena[i] != cadena[j]){
+            esPalindromo false;
+            break;
         }
+        i++;
+        i--;
     }
-
+    if (esPalindromo){
+        cout << "La cadena es palindroma"
+    }
+*/
+    int x =10;
+    int y =20;
+    cambio(x,y);
 
 
     ///cout << "La letra es: " << cad.at(5) << endl;
