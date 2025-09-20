@@ -30,10 +30,37 @@ int main()
     }
     cout << "La suma de los elementos de su lista es: " << sum << endl;
     cout << "La multiplicacion de los elementos de su lista es: " << mult << endl;
+    cout << endl;
+    cout << endl;
+    cout << endl;
 
     /// Implemente una funcion que reciba un arreglo de enteros
     /// y su tamaño  y retorne la suma de elementos del arreglo
+    /// <<<<<< TAREAAAAA >>>>>>
+
+    int n;
+    cout << "Ingrese la cantidad de sus numeros: " << endl;
+    cin >> n;
+
+    int sumape [n];
+    for (int i =0; i<n; i++){
+        cout << "Ingrese su numero: ";
+        cin >> sumape[i];
+    }
+    cout << "LA CADENA ES: " << endl;
+    for (int i = 0; i < n; i++){
+         cout << sumape[i] << "\t";
+    }
+    cout << endl;
+
+    int suma_total{0};
+    cout << "La suma de los elementos de su lista es: " << endl;
+    for (int i =0; i< n; i++){
+        suma_total += sumape[i];
+    }
 
 
+
+    cout << suma_total;
     return 0;
 }
