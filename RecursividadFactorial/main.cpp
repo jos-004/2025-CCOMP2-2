@@ -2,6 +2,7 @@
 ///TENER UN CASO DE PARADA Y LA CONDICION DE TRABAJO
 ///SIEMPRE LLAMANDOSE A SI MISMA LA FUNCION DENTRO DE LA FUNCION
 using namespace std;
+#include <string>
 
 long long factorial_positivo (long long g){
     if (g == 1){
@@ -41,22 +42,9 @@ int cant_digitos(int n){
         return cant_digitos(n/10) + 1;
     }
 }
-///DADO UN NUMERO REVISAR SI ES CAPICUA
-/// <<65656>> ----> Si es capicua
-/// <<96875>> ----> no es capicua
 
-int capicua(int numero){
-    if (numero < 10){
-        return 1;
-    }
-    int g {10};
-    if(capicua/g != capicua%g){
-        return 0;
-        break;
-    }else {
-        return capicua()/(g+10) == capicua()%(g+10);
-    }
-}
+
+
 
 
 
@@ -68,6 +56,38 @@ int main()
     cout << "El factorial es: " << factorial_positivo(4)<< endl;
     cout << "La secuencia Fibonacci es: " << fibonacci(4) << endl;
     cout << "La cantidad de digitos de su numero es: " << cant_digitos(512415426) << endl;
-    cout << "Su numero: " << capicua(141) << endl;
+
+
+
+    ///DADO UN NUMERO REVISAR SI ES CAPICUA
+/// <<65656>> ----> Si es capicua
+/// <<96875>> ----> no es capicua
+
+
+
+    string numero= "151";
+
+    int i = 0;
+    int j = numero.length()-1;
+    bool esCapicua = true;
+
+    while (i < j){
+        if (numero[i] != numero[j]){
+            esCapicua = false;
+            break;
+        }
+        i += 1;
+        j -=1;
+    }
+
+    if (esCapicua){
+        cout << "Su numero es capicua";
+    }else{
+        cout << "Su numero no es capicua";
+    }
+
+
+
+
     return 0;
 }
