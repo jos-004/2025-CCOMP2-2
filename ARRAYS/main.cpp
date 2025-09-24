@@ -5,6 +5,26 @@ using namespace std;
 /// int array [5] = {10, 42, 53, 754, 23};
 /// cout << array[0]; -----> 10
 
+
+
+ /// forma recusiva
+
+long sumar (int arr[], int tam){
+    int sum =0;
+    for (int i = 0; i < tam; sum+=arr[i]){
+    return 0;
+}
+
+
+
+long sumarR (int arr[], int tam){
+    if (tam == 0){
+        return 0;
+    }else{
+        return arr[tam - 1] + sumarR(arr, tam-1);
+    }
+ }
+
 int main()
 {
     int arr[5];
@@ -20,19 +40,21 @@ int main()
     cout << "Elemento 4: " << arr[3] << endl;
     cout << "Elemento 5: " << arr[4] << endl;
 
-    int sum {0};
-    for (int i = 0; i < 5; i++){
-        sum += arr[i];
-    }
+
+
+
     int mult {1};
     for (int j = 0; j < 5; j++){
         mult *= arr[j];
     }
-    cout << "La suma de los elementos de su lista es: " << sum << endl;
+    ///cout << "La suma de los elementos de su lista es: " << sum << endl;
     cout << "La multiplicacion de los elementos de su lista es: " << mult << endl;
     cout << endl;
     cout << endl;
     cout << endl;
+    cout << "La suma de los elementos de su lista es: " << sumarR << endl;
+    cout << "La SUMA RECURSIVA de los elementos de su lista es: " << sumarR << endl;
+
 
     /// Implemente una funcion que reciba un arreglo de enteros
     /// y su tamaño  y retorne la suma de elementos del arreglo
